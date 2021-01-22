@@ -1,4 +1,4 @@
-//github repo link-
+// https://github.com/motiullahsajit/assignment.js
 
 //kilometerToMeter conversion function
 function kilometerToMeter(kilometer) {
