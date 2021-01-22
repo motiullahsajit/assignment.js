@@ -34,10 +34,10 @@ function budgetCalculator(clock, phone, laptop) {
         return totalBudget;
     }
 }
-var myBudget = budgetCalculator(3, 4, 2);
+var myBudget = budgetCalculator(4, 4, 4);
 console.log(myBudget);
-var unvalid = budgetCalculator(3, 4, -2);
-console.log(unvalid);
+var invalid = budgetCalculator(3, 4, -2);
+console.log(invalid);
 
 //hotelCost function
 function hotelCost(totalDays) {
@@ -71,20 +71,21 @@ console.log(hotelRent);
 //megaFriend function
 var string = ['Jamal', 'Kafi', 'Mahmudur', 'Srabon'];
 function megaFriend(string) {
-    var megaWord = string[0];
-    for (var i = 0; i < string.length; i++) 
-        if(string == []){
-            return "Please give a input"
-        }
-        else {
-        var anotherWord = string[i];
-        if (anotherWord.length > megaWord.length) {
-            megaWord = anotherWord;
-        }
+    if (string == []) {
+        return "Please give a input"
     }
-    return megaWord;
+    else {
+        var megaName = string[0];
+        for (var i = 0; i < string.length; i++) {
+            var element = string[i];
+            if (element.length > megaName.length) {
+                megaName = element;
+            }
+        }
+        return megaName;
+    }
 }
-
 var result = megaFriend(string);
 console.log(result);
-
+var result2 = megaFriend(['Jamal', 'Kafi', 'Srabonti', 'Mahmudur']);
+console.log(result2);
