@@ -1,28 +1,51 @@
 //github repo link-
 
-//kilometer to meter conversion function
+//kilometerToMeter conversion function
 function kilometerToMeter(kilometer) {
-    var meter = kilometer * 1000;
-    return meter;
+    if (kilometer < 0) {
+        return "Please Enter A Positive Value";
+    }
+    else {
+        var meter = kilometer * 1000;
+        return meter;
+    }
 }
 var kilometer10 = kilometerToMeter(10);
 console.log(kilometer10);
+var negativeValue = kilometerToMeter(-5);
+console.log(negativeValue);
 
 //budgetCalculator function
 function budgetCalculator(clock, phone, laptop) {
-    var clockPrice = clock * 50;
-    var phonePrice = phone * 100;
-    var laptopPrice = laptop * 500;
-    var totalBudget = clockPrice + phonePrice + laptopPrice;
-    return totalBudget;
+    if (clock < 0) {
+        return "Please Enter A Valid Value"
+    }
+    else if (phone < 0) {
+        return "Please Enter A Valid Value"
+    }
+    else if (laptop < 0) {
+        return "Please Enter A Valid Value"
+    }
+    else {
+        var clockPrice = clock * 50;
+        var phonePrice = phone * 100;
+        var laptopPrice = laptop * 500;
+        var totalBudget = clockPrice + phonePrice + laptopPrice;
+        return totalBudget;
+    }
 }
 var myBudget = budgetCalculator(3, 4, 2);
 console.log(myBudget);
+var unvalid = budgetCalculator(3, 4, -2);
+console.log(unvalid);
 
 //hotelCost function
 function hotelCost(totalDays) {
     var totalRent = 0;
-    if (totalDays <= 10) {
+    if (totalDays < 0) {
+        return "Please give a valid input"
+    }
+    else if (totalDays <= 10) {
         totalRent = totalDays * 100;
     }
     else if (totalDays <= 20) {
@@ -42,3 +65,26 @@ function hotelCost(totalDays) {
 }
 var myHotelRent = hotelCost(27);
 console.log(myHotelRent);
+var hotelRent = hotelCost(-7);
+console.log(hotelRent);
+
+//megaFriend function
+var string = ['Jamal', 'Kafi', 'Mahmudur', 'Srabon'];
+function megaFriend(string) {
+    var megaWord = string[0];
+    for (var i = 0; i < string.length; i++) 
+        if(string == []){
+            return "Please give a input"
+        }
+        else {
+        var anotherWord = string[i];
+        if (anotherWord.length > megaWord.length) {
+            megaWord = anotherWord;
+        }
+    }
+    return megaWord;
+}
+
+var result = megaFriend(string);
+console.log(result);
+
