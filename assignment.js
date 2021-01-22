@@ -77,9 +77,9 @@ function megaFriend(string) {
     else {
         var megaName = string[0];
         for (var i = 0; i < string.length; i++) {
-            var element = string[i];
-            if (element.length > megaName.length) {
-                megaName = element;
+            var otherName = string[i];
+            if (otherName.length > megaName.length) {
+                megaName = otherName;
             }
         }
         return megaName;
@@ -89,3 +89,5 @@ var result = megaFriend(string);
 console.log(result);
 var result2 = megaFriend(['Jamal', 'Kafi', 'Srabonti', 'Mahmudur']);
 console.log(result2);
+var result3 = megaFriend([]);
+console.log(result3);
