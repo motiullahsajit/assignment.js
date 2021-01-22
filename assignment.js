@@ -71,7 +71,7 @@ console.log(hotelRent);
 //megaFriend function
 var string = ['Jamal', 'Kafi', 'Mahmudur', 'Srabon'];
 function megaFriend(string) {
-    if (string == []) {
+    if (string == 0) {
         return "Please give a input"
     }
     else {
